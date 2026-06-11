@@ -20,7 +20,6 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -31,7 +30,6 @@
     cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctext y='20' font-size='20'%3E☀%3C/text%3E%3C/svg%3E") 12 12, auto;
   }
 
-  /* ── NOISE TEXTURE ── */
   body::before {
     content: '';
     position: fixed; inset: 0; z-index: 0; pointer-events: none;
@@ -41,9 +39,6 @@
 
   section { position: relative; z-index: 1; }
 
-  /* ────────────────────────────────
-     HERO
-  ──────────────────────────────── */
   #hero {
     min-height: 100vh;
     background: var(--yellow-bright);
@@ -58,24 +53,20 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(100px, 25vw, 260px);
     color: rgba(255,107,0,0.10);
-    letter-spacing: -4px;
-    line-height: 1;
-    user-select: none;
-    white-space: nowrap;
+    letter-spacing: -4px; line-height: 1;
+    user-select: none; white-space: nowrap;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%) rotate(-5deg);
     pointer-events: none;
   }
 
   .badge-top {
-    background: var(--orange-main);
-    color: var(--white);
+    background: var(--orange-main); color: var(--white);
     font-family: 'Space Mono', monospace;
     font-size: 11px; font-weight: 700;
     letter-spacing: 0.18em; text-transform: uppercase;
     padding: 6px 18px;
-    border: 2px solid var(--brown-dark);
-    border-radius: 4px;
+    border: 2px solid var(--brown-dark); border-radius: 4px;
     margin-bottom: 1.5rem;
     animation: bounce-in 0.6s 0.1s both;
   }
@@ -89,12 +80,9 @@
   .hero-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(64px, 16vw, 160px);
-    color: var(--brown-dark);
-    line-height: 0.9;
-    text-align: center;
+    color: var(--brown-dark); line-height: 0.9; text-align: center;
     border: 4px solid var(--brown-dark);
-    padding: 12px 32px;
-    margin-bottom: 1.5rem;
+    padding: 12px 32px; margin-bottom: 1.5rem;
     position: relative;
     animation: bounce-in 0.7s 0.3s both;
   }
@@ -108,12 +96,9 @@
 
   .hero-sub {
     font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: clamp(16px, 3vw, 22px);
-    color: var(--orange-deep);
-    text-align: center;
-    max-width: 480px;
-    line-height: 1.5;
+    font-style: italic; font-size: clamp(16px, 3vw, 22px);
+    color: var(--orange-deep); text-align: center;
+    max-width: 480px; line-height: 1.5;
     animation: bounce-in 0.7s 0.45s both;
   }
 
@@ -125,30 +110,17 @@
 
   .btn-retro {
     font-family: 'Space Mono', monospace;
-    font-weight: 700; font-size: 13px;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    padding: 12px 28px;
-    border: 2.5px solid var(--brown-dark);
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
+    font-weight: 700; font-size: 13px; letter-spacing: 0.05em;
+    text-decoration: none; padding: 12px 28px;
+    border: 2.5px solid var(--brown-dark); border-radius: 4px;
+    cursor: pointer; position: relative;
     transition: transform 0.1s, box-shadow 0.1s;
     display: inline-block;
   }
-
   .btn-retro:active { transform: translate(3px, 3px); box-shadow: none !important; }
-
-  .btn-primary {
-    background: var(--orange-main); color: var(--white);
-    box-shadow: 4px 4px 0 var(--brown-dark);
-  }
+  .btn-primary { background: var(--orange-main); color: var(--white); box-shadow: 4px 4px 0 var(--brown-dark); }
   .btn-primary:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--brown-dark); }
-
-  .btn-secondary {
-    background: var(--white); color: var(--brown-dark);
-    box-shadow: 4px 4px 0 var(--brown-dark);
-  }
+  .btn-secondary { background: var(--white); color: var(--brown-dark); box-shadow: 4px 4px 0 var(--brown-dark); }
   .btn-secondary:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--brown-dark); }
 
   .scroll-hint {
@@ -158,9 +130,7 @@
     display: flex; flex-direction: column; align-items: center; gap: 8px;
     animation: pulse 2s infinite;
   }
-  .scroll-hint .arrow { font-size: 20px; }
 
-  /* floating stickers */
   .sticker {
     position: absolute; font-size: 36px;
     animation: float 4s ease-in-out infinite;
@@ -171,35 +141,19 @@
   .sticker:nth-child(3) { bottom: 14%; left: 10%; animation-delay: 1.6s; }
   .sticker:nth-child(4) { bottom: 10%; right: 6%; animation-delay: 0.4s; }
 
-  /* ────────────────────────────────
-     TAPE DIVIDER
-  ──────────────────────────────── */
   .tape-divider {
     background: var(--orange-light);
     border-top: 2px solid var(--brown-dark);
     border-bottom: 2px solid var(--brown-dark);
-    padding: 10px 0;
-    overflow: hidden; white-space: nowrap;
+    padding: 10px 0; overflow: hidden; white-space: nowrap;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 18px; letter-spacing: 0.12em;
-    color: var(--brown-dark);
+    font-size: 18px; letter-spacing: 0.12em; color: var(--brown-dark);
   }
   .tape-inner { display: inline-block; animation: marquee 18s linear infinite; }
   .tape-inner span { margin: 0 24px; }
 
-  /* ────────────────────────────────
-     CARTA SECTION
-  ──────────────────────────────── */
-  #carta {
-    padding: 5rem 2rem;
-    background: var(--cream);
-    display: flex; justify-content: center;
-  }
-
-  .letter-wrapper {
-    max-width: 680px; width: 100%;
-    position: relative;
-  }
+  #carta { padding: 5rem 2rem; background: var(--cream); display: flex; justify-content: center; }
+  .letter-wrapper { max-width: 680px; width: 100%; position: relative; }
 
   .section-eyebrow {
     font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
@@ -211,28 +165,20 @@
   .section-heading {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(40px, 8vw, 72px);
-    color: var(--brown-dark);
-    line-height: 1; margin-bottom: 2rem;
+    color: var(--brown-dark); line-height: 1; margin-bottom: 2rem;
   }
 
   .letter-card {
-    background: var(--white);
-    border: 3px solid var(--brown-dark);
-    border-radius: 4px;
-    padding: 2.5rem;
-    box-shadow: 6px 6px 0 var(--brown-dark);
-    position: relative;
+    background: var(--white); border: 3px solid var(--brown-dark); border-radius: 4px;
+    padding: 2.5rem; box-shadow: 6px 6px 0 var(--brown-dark); position: relative;
   }
 
   .letter-stamp {
     position: absolute; top: -18px; right: 28px;
-    background: var(--stamp-red);
-    color: var(--white);
+    background: var(--stamp-red); color: var(--white);
     font-family: 'Bebas Neue', sans-serif;
     font-size: 12px; letter-spacing: 0.1em;
-    padding: 4px 10px;
-    border: 2px solid var(--brown-dark);
-    border-radius: 2px;
+    padding: 4px 10px; border: 2px solid var(--brown-dark); border-radius: 2px;
     transform: rotate(2deg);
   }
 
@@ -246,7 +192,6 @@
     font-style: italic; font-size: clamp(15px, 2vw, 18px);
     line-height: 1.85; color: var(--brown-dark);
   }
-
   .letter-body p { margin-bottom: 1.2rem; }
   .letter-body p:last-child { margin-bottom: 0; }
 
@@ -254,235 +199,115 @@
     margin-top: 2rem;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 32px; color: var(--orange-main);
-    border-top: 2px solid var(--yellow-bright);
-    padding-top: 1rem;
+    border-top: 2px solid var(--yellow-bright); padding-top: 1rem;
   }
 
-  /* ────────────────────────────────
-     RAZÕES SECTION
-  ──────────────────────────────── */
   #razoes {
-    padding: 5rem 2rem;
-    background: var(--orange-main);
-    border-top: 4px solid var(--brown-dark);
-    border-bottom: 4px solid var(--brown-dark);
+    padding: 5rem 2rem; background: var(--orange-main);
+    border-top: 4px solid var(--brown-dark); border-bottom: 4px solid var(--brown-dark);
   }
-
   .razoes-inner { max-width: 860px; margin: 0 auto; }
-
   .razoes-heading {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(40px, 8vw, 80px);
-    color: var(--yellow-bright);
-    line-height: 1; margin-bottom: 2.5rem;
-    text-align: center;
+    font-size: clamp(40px, 8vw, 80px); color: var(--yellow-bright);
+    line-height: 1; margin-bottom: 2.5rem; text-align: center;
   }
   .razoes-heading span { color: var(--white); }
 
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-  }
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
 
   .reason-card {
-    background: var(--yellow-bright);
-    border: 2.5px solid var(--brown-dark);
-    border-radius: 4px;
-    padding: 1.25rem;
-    box-shadow: 4px 4px 0 var(--brown-dark);
-    transition: transform 0.15s, box-shadow 0.15s;
-    cursor: default;
+    background: var(--yellow-bright); border: 2.5px solid var(--brown-dark);
+    border-radius: 4px; padding: 1.25rem; box-shadow: 4px 4px 0 var(--brown-dark);
+    transition: transform 0.15s, box-shadow 0.15s; cursor: default;
   }
-
   .reason-card:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 var(--brown-dark); }
+  .reason-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--orange-main); line-height: 1; margin-bottom: 0.25rem; }
+  .reason-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: var(--brown-dark); line-height: 1.5; }
 
-  .reason-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 48px; color: var(--orange-main);
-    line-height: 1; margin-bottom: 0.25rem;
-  }
-
-  .reason-text {
-    font-family: 'Playfair Display', serif;
-    font-style: italic; font-size: 15px;
-    color: var(--brown-dark); line-height: 1.5;
-  }
-
-  /* ────────────────────────────────
-     GALERIA / MEMORIES
-  ──────────────────────────────── */
-  #galeria {
-    padding: 5rem 2rem;
-    background: var(--yellow-pale);
-    border-bottom: 4px solid var(--brown-dark);
-  }
-
+  #galeria { padding: 5rem 2rem; background: var(--yellow-pale); border-bottom: 4px solid var(--brown-dark); }
   .galeria-inner { max-width: 860px; margin: 0 auto; }
 
-  .polaroids {
-    display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;
-    margin-top: 2rem;
-  }
+  .polaroids { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; margin-top: 2rem; }
 
   .polaroid {
-    background: var(--white);
-    border: 2px solid var(--brown-dark);
-    padding: 12px 12px 40px;
-    box-shadow: 4px 4px 0 var(--brown-dark);
-    width: 180px;
-    transition: transform 0.25s;
+    background: var(--white); border: 2px solid var(--brown-dark);
+    padding: 12px 12px 40px; box-shadow: 4px 4px 0 var(--brown-dark);
+    width: 180px; transition: transform 0.25s;
   }
-
   .polaroid:nth-child(odd) { transform: rotate(-2.5deg); }
   .polaroid:nth-child(even) { transform: rotate(2deg); }
   .polaroid:hover { transform: rotate(0deg) scale(1.07); z-index: 2; }
 
   .polaroid-img {
-    width: 100%; aspect-ratio: 1;
-    background: var(--yellow-bright);
+    width: 100%; aspect-ratio: 1; background: var(--yellow-bright);
     border: 1px solid var(--yellow-deep);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 48px;
+    display: flex; align-items: center; justify-content: center; font-size: 48px;
   }
-
   .polaroid-caption {
-    font-family: 'Playfair Display', serif;
-    font-style: italic; font-size: 12px;
-    color: var(--brown-dark); text-align: center;
-    margin-top: 10px; line-height: 1.4;
+    font-family: 'Playfair Display', serif; font-style: italic; font-size: 12px;
+    color: var(--brown-dark); text-align: center; margin-top: 10px; line-height: 1.4;
   }
 
-  /* ────────────────────────────────
-     MENSAGEM FINAL
-  ──────────────────────────────── */
   #final {
-    padding: 6rem 2rem;
-    background: var(--brown-dark);
-    text-align: center;
-    position: relative; overflow: hidden;
+    padding: 6rem 2rem; background: var(--brown-dark);
+    text-align: center; position: relative; overflow: hidden;
   }
-
   #final::before {
-    content: '♡';
-    position: absolute; top: 50%; left: 50%;
+    content: '♡'; position: absolute; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     font-size: 40vw; color: rgba(255,107,0,0.07);
-    pointer-events: none; user-select: none;
-    line-height: 1;
+    pointer-events: none; user-select: none; line-height: 1;
   }
 
-  .final-eyebrow {
-    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--orange-light); margin-bottom: 1rem;
-  }
-
-  .final-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(48px, 12vw, 120px);
-    color: var(--yellow-bright);
-    line-height: 0.9; margin-bottom: 1.5rem;
-  }
-
+  .final-eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange-light); margin-bottom: 1rem; }
+  .final-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px, 12vw, 120px); color: var(--yellow-bright); line-height: 0.9; margin-bottom: 1.5rem; }
   .final-title .accent { color: var(--orange-main); display: block; }
-
-  .final-msg {
-    font-family: 'Playfair Display', serif;
-    font-style: italic; font-size: clamp(15px, 2.5vw, 20px);
-    color: var(--yellow-pale); max-width: 500px; margin: 0 auto 2.5rem;
-    line-height: 1.6;
-  }
+  .final-msg { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(15px, 2.5vw, 20px); color: var(--yellow-pale); max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.6; }
 
   .heart-btn {
-    background: var(--orange-main);
-    color: var(--white);
-    font-family: 'Space Mono', monospace;
-    font-size: 15px; font-weight: 700;
-    border: 2.5px solid var(--yellow-bright);
-    border-radius: 4px;
-    padding: 14px 36px;
-    cursor: pointer;
+    background: var(--orange-main); color: var(--white);
+    font-family: 'Space Mono', monospace; font-size: 15px; font-weight: 700;
+    border: 2.5px solid var(--yellow-bright); border-radius: 4px;
+    padding: 14px 36px; cursor: pointer;
     box-shadow: 4px 4px 0 var(--yellow-bright);
-    transition: transform 0.1s, box-shadow 0.1s;
-    position: relative; z-index: 1;
+    transition: transform 0.1s, box-shadow 0.1s; position: relative; z-index: 1;
   }
   .heart-btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--yellow-bright); }
   .heart-btn:active { transform: translate(3px, 3px); box-shadow: none; }
 
-  /* hearts explosion */
   .heart-burst {
     position: fixed; pointer-events: none; z-index: 9999;
-    font-size: 24px;
-    animation: burst 1.2s ease-out forwards;
+    font-size: 24px; animation: burst 1.2s ease-out forwards;
   }
 
-  /* ────────────────────────────────
-     FOOTER
-  ──────────────────────────────── */
   footer {
-    background: var(--yellow-bright);
-    border-top: 3px solid var(--brown-dark);
-    padding: 1.5rem 2rem;
-    text-align: center;
-    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--orange-deep);
+    background: var(--yellow-bright); border-top: 3px solid var(--brown-dark);
+    padding: 1.5rem 2rem; text-align: center;
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange-deep);
   }
 
-  /* ────────────────────────────────
-     ANIMATIONS
-  ──────────────────────────────── */
-  @keyframes bounce-in {
-    from { opacity: 0; transform: scale(0.8) translateY(16px); }
-    to   { opacity: 1; transform: scale(1) translateY(0); }
-  }
+  @keyframes bounce-in { from { opacity: 0; transform: scale(0.8) translateY(16px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+  @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-14px) rotate(6deg); } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  @keyframes burst { 0% { opacity: 1; transform: translate(0,0) scale(1); } 100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0.5); } }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50%       { transform: translateY(-14px) rotate(6deg); }
-  }
-
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0.4; }
-  }
-
-  @keyframes burst {
-    0%   { opacity: 1; transform: translate(0,0) scale(1); }
-    100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0.5); }
-  }
-
-  /* fade-in on scroll */
-  .reveal {
-    opacity: 0; transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* ────────────────────────────────
-     RESPONSIVE
-  ──────────────────────────────── */
+  .rounded-photo {
+    border-radius: 20px; width: 300px; height: auto;
+    display: block; margin: 20px auto;
+  }
+
+  #music-icon.paused { animation-play-state: paused; }
+
   @media (max-width: 600px) {
     .letter-card { padding: 1.5rem; }
     .polaroid { width: 140px; }
   }
-
-
-  .rounded-photo {
-    border-radius: 20px; /* Ajuste este valor para mais ou menos arredondamento */
-    width: 300px;        /* Ajuste a largura conforme necessário */
-    height: auto;        /* Mantém a proporção da imagem */
-    display: block;      /* Ajuda no alinhamento */
-    margin: 20px auto;   /* Centraliza a imagem horizontalmente */
-}
-
-
-
-
 </style>
 </head>
 <body>
@@ -506,9 +331,7 @@
     <a href="#razoes" class="btn-retro btn-secondary">Ver os motivos →</a>
   </div>
 
-  <div class="scroll-hint">
-    
-  </div>
+  <div class="scroll-hint"></div>
 </section>
 
 <!-- ── TAPE DIVIDER ── -->
@@ -568,9 +391,7 @@
     <div class="reveal">
       <h2 class="razoes-heading"><span>5 razões pra</span><br>te amar</h2>
     </div>
-    <div class="cards-grid" id="reasons-grid">
-      <!-- Filled by JS -->
-    </div>
+    <div class="cards-grid" id="reasons-grid"></div>
   </div>
 </section>
 
@@ -581,9 +402,7 @@
       <div class="section-eyebrow">Nossas memórias</div>
       <h2 class="section-heading">Momentos<br>que guardo.</h2>
     </div>
-    <div class="polaroids reveal" id="polaroids">
-      <!-- Filled by JS -->
-    </div>
+    <div class="polaroids reveal" id="polaroids"></div>
   </div>
 </section>
 
@@ -606,8 +425,74 @@
   <p>Com amor, Gabriel Morais · Feliz Dia dos Namorados!</p>
 </footer>
 
+<!-- ── MUSIC PLAYER ── -->
+<div id="music-player" style="
+  position: fixed; bottom: 20px; right: 20px; z-index: 9999;
+  background: var(--brown-dark); color: var(--yellow-bright);
+  border: 2.5px solid var(--yellow-bright);
+  border-radius: 4px; box-shadow: 4px 4px 0 var(--yellow-bright);
+  padding: 10px 16px;
+  display: flex; align-items: center; gap: 12px;
+  font-family: 'Space Mono', monospace; font-size: 12px;
+">
+  <span id="music-icon" style="font-size:18px; display:inline-block; animation: spin 3s linear infinite;">♪</span>
+  <div>
+    <div style="font-weight:700; letter-spacing:0.05em;" id="music-label">♫ Tocando...</div>
+    <div style="font-size:10px; color: var(--orange-light); margin-top:2px;" id="music-filename"></div>
+  </div>
+  <button id="music-toggle" onclick="toggleMusic()" style="
+    background: var(--orange-main); color: var(--white);
+    border: 1.5px solid var(--yellow-bright); border-radius: 3px;
+    font-family: 'Space Mono', monospace; font-size: 11px; font-weight:700;
+    padding: 4px 10px; cursor: pointer; letter-spacing: 0.05em;
+  ">❚❚</button>
+</div>
+
 <script>
-  // ── Reasons data ──
+  // ─────────────────────────────────────────
+  // MÚSICA: troque pelo nome exato do seu
+  // arquivo. Ele deve estar na mesma pasta
+  // que o index.html.
+  // Formatos: .mp3  .ogg  .wav  .aac  .m4a
+  // ─────────────────────────────────────────
+  const MUSIC_FILE = 'music.mp3';
+
+  const audio = new Audio(MUSIC_FILE);
+  audio.loop   = true;
+  audio.volume = 0.6;
+
+  document.getElementById('music-filename').textContent = MUSIC_FILE;
+
+  function setPlaying() {
+    document.getElementById('music-label').textContent = '♫ Tocando...';
+    document.getElementById('music-icon').classList.remove('paused');
+    document.getElementById('music-toggle').textContent = '❚❚';
+  }
+  function setPaused() {
+    document.getElementById('music-label').textContent = '♫ Pausado';
+    document.getElementById('music-icon').classList.add('paused');
+    document.getElementById('music-toggle').textContent = '▶';
+  }
+
+  function tryAutoplay() {
+    audio.play().then(setPlaying).catch(() => {
+      // Navegador bloqueou autoplay — toca no primeiro clique
+      document.getElementById('music-label').textContent = '♫ Clique pra tocar';
+      document.getElementById('music-icon').classList.add('paused');
+      document.getElementById('music-toggle').textContent = '▶';
+      const unlock = () => { audio.play().then(setPlaying); document.removeEventListener('click', unlock); };
+      document.addEventListener('click', unlock);
+    });
+  }
+
+  window.addEventListener('load', tryAutoplay);
+
+  function toggleMusic() {
+    if (audio.paused) { audio.play().then(setPlaying); }
+    else              { audio.pause(); setPaused(); }
+  }
+
+  // ── Reasons ──
   const reasons = [
     { num: '01', text: 'Seu sorriso ilumina qualquer ambiente e é o mais lindo do universo.' },
     { num: '02', text: 'Você me conhece de verdade e me aceita com todos os meus defeitos.' },
@@ -615,7 +500,6 @@
     { num: '04', text: 'A sua inteligência me encanta, você é uma mulher excepcional.' },
     { num: '05', text: 'Você me faz sentir como se meu coração estivesse expandindo de tanto amor!' },
   ];
-
   const grid = document.getElementById('reasons-grid');
   reasons.forEach((r, i) => {
     const card = document.createElement('div');
@@ -625,7 +509,7 @@
     grid.appendChild(card);
   });
 
-  // ── Polaroids data ──
+  // ── Polaroids ──
   const memories = [
     { emoji: '🌅', caption: 'Nosso primeiro encontro (e as safadezas dele haha!)' },
     { emoji: '🍺', caption: 'A cervejinha que virou tradição todo final de semana' },
@@ -634,7 +518,6 @@
     { emoji: '🏨', caption: 'Nossas noites nos hotéis' },
     { emoji: '🏊🏻‍♂️', caption: 'Os banhos de piscina do dia que começamos a namorar' },
   ];
-
   const pols = document.getElementById('polaroids');
   memories.forEach((m, i) => {
     const p = document.createElement('div');
@@ -646,9 +529,8 @@
 
   // ── Scroll reveal ──
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
-
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   // ── Heart explosion ──
@@ -660,23 +542,19 @@
       el.className = 'heart-burst';
       el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
       const angle = (Math.PI * 2 / 18) * i;
-      const dist = 80 + Math.random() * 120;
+      const dist  = 80 + Math.random() * 120;
       el.style.left = cx + 'px';
-      el.style.top = cy + 'px';
+      el.style.top  = cy + 'px';
       el.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
       el.style.setProperty('--ty', Math.sin(angle) * dist + 'px');
       el.style.animationDelay = (Math.random() * 0.15) + 's';
       document.body.appendChild(el);
       setTimeout(() => el.remove(), 1500);
     }
-
     const btn = document.getElementById('heartBtn');
     btn.textContent = '✓ Beijo enviado! ♡';
     btn.style.background = '#c44a00';
-    setTimeout(() => {
-      btn.textContent = '♡ Mandar outro beijo';
-      btn.style.background = '';
-    }, 2500);
+    setTimeout(() => { btn.textContent = '♡ Mandar outro beijo'; btn.style.background = ''; }, 2500);
   }
 </script>
 </body>
